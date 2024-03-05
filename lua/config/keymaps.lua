@@ -6,8 +6,8 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-keymap.set("n", "E", "$", opts)
-keymap.set("n", "B", "^", opts)
+keymap.set({ "n", "v" }, "E", "$", opts)
+keymap.set({ "n", "v" }, "B", "^", opts)
 
 -- Move lines around
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
